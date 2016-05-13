@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/findcar_tab"
+            android:layout_width="@dimen/fragment_recommend_tab_width"
+            android:layout_height="@dimen/fragment_recommend_tab_height"
+            android:layout_weight="1"
+            app:tabMode="scrollable" />
+
+        <ImageView
+            android:layout_width="@dimen/fragment_recommend_searchbar"
+            android:layout_height="@dimen/fragment_recommend_searchbar"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/searchbar" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/findcar_vp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_recommend_viewpager"
+        android:layout_weight="1" />
+</LinearLayout>

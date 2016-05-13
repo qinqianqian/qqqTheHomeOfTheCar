@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">TheHomeOfTheCar</string>
+    <string name="app_name">汽车之家</string>
+    <string name="fragment_news_item_three">图说</string>
 </resources>

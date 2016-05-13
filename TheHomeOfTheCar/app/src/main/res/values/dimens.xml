@@ -2,4 +2,35 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activit_fragment_height">0dp</dimen>
+    <dimen name="activity_radiobutton_width">0dp</dimen>
+    <dimen name="activity_radiobutton_margin_left">30dp</dimen>
+    <dimen name="fragment_recommend_viewpager">0dp</dimen>
+    <dimen name="fragment_recommend_tab_height">40dp</dimen>
+    <dimen name="fragment_recommend_searchbar">40dp</dimen>
+    <dimen name="fragment_recommend_tab_width">0dp</dimen>
+    <dimen name="welcome_tv_marginRight">15dp</dimen>
+    <dimen name="welcome_tv_marginTop">15dp</dimen>
+    <dimen name="item_smallPic_width">100dp</dimen>
+    <dimen name="item_smallPic_height">75dp</dimen>
+    <dimen name="item_title">20sp</dimen>
+    <dimen name="item_timeAndReply">15sp</dimen>
+    <dimen name="fragment_recommend_news_marginLeftAndRight">10dp</dimen>
+    <dimen name="item_paddingBottomAndTop">5dp</dimen>
+    <dimen name="item_tv_padding_left">5dp</dimen>
+    <dimen name="item_threeImage_marginRightAndLeft">20dp</dimen>
+    <dimen name="item_threeImage_width">110dp</dimen>
+    <dimen name="item_threeImage_height">80dp</dimen>
+    <dimen name="item_threeImage_top">20dp</dimen>
+    <dimen name="item_tv_bottom">15dp</dimen>
+    <dimen name="item_pic_tv_marginRight">5dp</dimen>
+    <!--图说小图片的宽高-->
+    <dimen name="item_pic_widthAndHeigth">15dp</dimen>
+    <dimen name="item_pic_marginTop">3dp</dimen>
+    <dimen name="item_pic_marginRight">2dp</dimen>
+
+    <!--轮播图-->
+    <dimen name="view_small_padding">1dp</dimen>
+    <dimen name="view_padding">6dp</dimen>
+
 </resources>
