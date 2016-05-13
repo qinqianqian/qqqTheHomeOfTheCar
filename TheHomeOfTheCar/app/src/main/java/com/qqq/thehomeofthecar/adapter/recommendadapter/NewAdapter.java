@@ -96,7 +96,8 @@ public class NewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                         public void onClick(View v) {
                             int pos = viewHolder.getLayoutPosition();
                             int id = newFragmentBean.getResult().getNewslist().get(pos).getId();
-                            onClickListenerRecycler.onClickRecycler(id);
+                            int media=newFragmentBean.getResult().getNewslist().get(pos).getMediatype();
+                            onClickListenerRecycler.onClickRecycler(id,media);
                         }
                     });
                 }
@@ -127,7 +128,8 @@ public class NewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                         public void onClick(View v) {
                             int pos = viewHolder.getLayoutPosition();
                             int id = newFragmentBean.getResult().getNewslist().get(pos).getId();
-                            onClickListenerRecycler.onClickRecycler(id);
+                            int mediaType=newFragmentBean.getResult().getNewslist().get(pos).getMediatype();
+                            onClickListenerRecycler.onClickRecycler(id,mediaType);
                         }
                     });
                 }
@@ -207,6 +209,6 @@ public class NewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     //内部接口 实现新闻详情页面的点击事件
     public interface OnClickListenerRecycler {
-        void onClickRecycler(int id);
+        void onClickRecycler(int id,int mediaType);
     }
 }

@@ -7,4 +7,8 @@
     <color name="colorWelcomeTv">#ffffff</color>
     <color name="colorWelcomeTvBg">#666666</color>
     <color name="colorWhite">#ffffff</color>
+    <!--快报类型名字颜色-->
+    <color name="color_bullection_typename">#5c81d1</color>
+    <!--抽屉的背景颜色-->
+    <color name="drawer">#ffffff</color>
 </resources>

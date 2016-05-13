@@ -35,7 +35,7 @@ public class CycleAdapter extends PagerAdapter {
     @Override
     public int getCount() {
    // Log.d("CycleAdapter", "views.size():" + views.size());
-        return views == null ? 0 : views.size();
+        return views == null ? 0 : Integer.MAX_VALUE;
 
     }
 

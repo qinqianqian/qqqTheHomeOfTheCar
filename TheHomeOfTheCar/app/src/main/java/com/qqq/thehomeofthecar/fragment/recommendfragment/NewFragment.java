@@ -62,6 +62,7 @@ public class NewFragment extends BaseFragment implements NewAdapter.OnClickListe
     private Handler handler = new Handler(); // 轮播handler
     private static final int TIME = 3000;// 轮播间隔时间
     private boolean isRotate = false; // 是否轮播,默认false
+    private String path;
 
 
     @Override
@@ -120,7 +121,7 @@ public class NewFragment extends BaseFragment implements NewAdapter.OnClickListe
         }
         cycleAdapter = new CycleAdapter(infos, getContext());
         viewPager.setAdapter(cycleAdapter);
-        viewPager.setCurrentItem(1000);
+        viewPager.setCurrentItem(0);
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -154,17 +155,17 @@ public class NewFragment extends BaseFragment implements NewAdapter.OnClickListe
     protected void startRotate() {
         // 初始化线程对象
         rotateRunnable = new Runnable() {
-                @Override
-                public void run() {
-                    // 获得ViewPager当前页
-                    int nowIndex = viewPager.getCurrentItem();
-                    // 设置ViewPager的页数是当前页自增1
-                    // 这里要判断,轮播的下一张page不能超过viewpager的count
-                    // 否则会崩2
-                    viewPager.setCurrentItem(++nowIndex);
+            @Override
+            public void run() {
+                // 获得ViewPager当前页
+                int nowIndex = viewPager.getCurrentItem();
+                // 设置ViewPager的页数是当前页自增1
+                // 这里要判断,轮播的下一张page不能超过viewpager的count
+                // 否则会崩2
+                viewPager.setCurrentItem(++nowIndex);
 //                if (isRotate) {
-                    // handler延时发送线程,实现轮播
-                    handler.postDelayed(rotateRunnable, TIME);
+                // handler延时发送线程,实现轮播
+                handler.postDelayed(rotateRunnable, TIME);
 //                }
             }
         };
@@ -198,8 +199,18 @@ public class NewFragment extends BaseFragment implements NewAdapter.OnClickListe
     }
 
     // http://cont.app.autohome.com.cn/autov4.2.5/content/News/newscontent-a2-pm1-v4.2.5-n%@-lz0-sp0-nt0-sa1-p0-c1-fs0-cw320.html    @Override
-    public void onClickRecycler(int id) {
-        String path = "http://cont.app.autohome.com.cn/autov4.2.5/content/News/newscontent-a2-pm1-v4.2.5-n" + id + "-lz0-sp0-nt0-sa1-p0-c1-fs0-cw320.html";
+    public void onClickRecycler(int id, int mediaType) {
+        if (mediaType == 1) {
+            path = "http://cont.app.autohome.com.cn/autov4.2.5/content/News/newscontent-a2-pm1-v4.2.5-n" + id + "-lz0-sp0-nt0-sa1-p0-c1-fs0-cw320.html";
+        } else if (mediaType == 3) {
+            path = "http://v.autohome.com.cn/v_4_" + id + ".html";
+        } else if (mediaType == 5) {
+            path = "http://forum.app.autohome.com.cn/autov5.0.0/forum/club/topiccontent-a2-pm2-v5.0.0-t" + id + "-o0-p1-s20-c1-nt0-fs0-sp0-al0-cw320.json";
+        } else if (mediaType == 6) {
+            path = "http://app.api.autohome.com.cn/autov5.0.0/news/newsdetailpicarticle-pm2-nid" + id + ".json";
+        } else {
+            path = null;
+        }
         Intent intent = new Intent();
         intent.putExtra("path", path);
         intent.setClass(getContext(), DetailActivity.class);

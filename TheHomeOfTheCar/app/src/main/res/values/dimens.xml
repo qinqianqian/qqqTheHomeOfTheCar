@@ -13,8 +13,10 @@
     <dimen name="welcome_tv_marginTop">15dp</dimen>
     <dimen name="item_smallPic_width">100dp</dimen>
     <dimen name="item_smallPic_height">75dp</dimen>
+    <!--大的标题和小的时间等-->
     <dimen name="item_title">20sp</dimen>
     <dimen name="item_timeAndReply">15sp</dimen>
+    <!--item的左边距和右边距-->
     <dimen name="fragment_recommend_news_marginLeftAndRight">10dp</dimen>
     <dimen name="item_paddingBottomAndTop">5dp</dimen>
     <dimen name="item_tv_padding_left">5dp</dimen>
@@ -32,5 +34,15 @@
     <!--轮播图-->
     <dimen name="view_small_padding">1dp</dimen>
     <dimen name="view_padding">6dp</dimen>
-
+    <!--快报布局-->
+    <dimen name="item_title_marginTop">5dp</dimen>
+    <dimen name="item_image_marginTop">15dp</dimen>
+    <dimen name="item_time_marginTop">5dp</dimen>
+    <dimen name="item_padding">10dp</dimen>
+    <!--抽屉的宽度-->
+    <dimen name="drawer">280dp</dimen>
+    <!--轮播图-->
+    <dimen name="cycle_height">180dp</dimen>
+    <dimen name="cycle_vp">300dp</dimen>
+    <dimen name="cycle_marginBottom">10dp</dimen>
 </resources>
