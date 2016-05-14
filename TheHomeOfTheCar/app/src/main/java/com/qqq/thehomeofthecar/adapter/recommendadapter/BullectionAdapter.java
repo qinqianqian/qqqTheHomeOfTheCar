@@ -19,12 +19,7 @@ import it.sephiroth.android.library.picasso.Picasso;
 public class BullectionAdapter extends BaseAdapter {
     private BullectionFragmetBean bullectionFragmetBean;
     private Context context;
-    private OnClickListener onClickListener;
 
-    public void setOnClickListener(OnClickListener onClickListener) {
-        this.onClickListener = onClickListener;
-        notifyDataSetChanged();
-    }
 
     public BullectionAdapter(Context context) {
         this.context = context;
@@ -36,9 +31,17 @@ public class BullectionAdapter extends BaseAdapter {
         notifyDataSetChanged();
     }
 
+    public void addBullectionFragmetBean(BullectionFragmetBean bullectionFragmetBean1) {
+        for (int i = 0; i < bullectionFragmetBean1.getResult().getList().size(); i++) {
+            bullectionFragmetBean.getResult().getList().add(bullectionFragmetBean1.getResult().getList().get(i));
+        }
+        notifyDataSetChanged();
+    }
+
     @Override
     public int getCount() {
-        return bullectionFragmetBean==null?0:bullectionFragmetBean.getResult().getList().size();
+        return bullectionFragmetBean == null ? 0 : bullectionFragmetBean.getResult().getList().size();
+
     }
 
     @Override
@@ -54,38 +57,39 @@ public class BullectionAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         MyViewHolder holder;
-        if (convertView==null){
-            convertView= LayoutInflater.from(context).inflate(R.layout.item_bullection,parent,false);
-            holder=new MyViewHolder(convertView);
+        if (convertView == null) {
+            convertView = LayoutInflater.from(context).inflate(R.layout.item_bullection, parent, false);
+            holder = new MyViewHolder(convertView);
             convertView.setTag(holder);
 
-        }else {
-            holder= (MyViewHolder) convertView.getTag();
+        } else {
+            holder = (MyViewHolder) convertView.getTag();
         }
 
         holder.createTime.setText(bullectionFragmetBean.getResult().getList().get(position).getCreatetime());
         holder.title.setText(bullectionFragmetBean.getResult().getList().get(position).getTitle());
         holder.typeName.setText(bullectionFragmetBean.getResult().getList().get(position).getTypename());
-        holder.reviewCount.setText(bullectionFragmetBean.getResult().getList().get(position).getReviewcount()+" 人浏览");
-        loadImage(holder.bgImage,bullectionFragmetBean.getResult().getList().get(position).getBgimage());
+        holder.reviewCount.setText(bullectionFragmetBean.getResult().getList().get(position).getReviewcount() + " 人浏览");
+        loadImage(holder.bgImage, bullectionFragmetBean.getResult().getList().get(position).getBgimage());
 
         return convertView;
     }
-    class MyViewHolder{
-        TextView title,typeName,reviewCount,createTime;
+
+    class MyViewHolder {
+        TextView title, typeName, reviewCount, createTime;
         ImageView bgImage;
-        public MyViewHolder(View itemView){
-            title= (TextView) itemView.findViewById(R.id.bullection_title);
-            typeName= (TextView) itemView.findViewById(R.id.bullection_typename);
-            reviewCount= (TextView) itemView.findViewById(R.id.bullection_reviewcount);
-            createTime= (TextView) itemView.findViewById(R.id.bullection_createtime);
-            bgImage= (ImageView) itemView.findViewById(R.id.bullection_bgimage);
+
+        public MyViewHolder(View itemView) {
+            title = (TextView) itemView.findViewById(R.id.bullection_title);
+            typeName = (TextView) itemView.findViewById(R.id.bullection_typename);
+            reviewCount = (TextView) itemView.findViewById(R.id.bullection_reviewcount);
+            createTime = (TextView) itemView.findViewById(R.id.bullection_createtime);
+            bgImage = (ImageView) itemView.findViewById(R.id.bullection_bgimage);
         }
     }
-    public void loadImage(ImageView image ,String url){
+
+    public void loadImage(ImageView image, String url) {
         Picasso.with(context).load(url).placeholder(R.mipmap.ahlib_carback).error(R.mipmap.ahlib_page_icon_empty).into(image);
     }
-    public  interface OnClickListener {
-        public void onClickL( int id);
-    }
+
 }

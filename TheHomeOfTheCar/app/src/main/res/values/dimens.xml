@@ -45,4 +45,21 @@
     <dimen name="cycle_height">180dp</dimen>
     <dimen name="cycle_vp">300dp</dimen>
     <dimen name="cycle_marginBottom">10dp</dimen>
+    <!--bullection 内部activity-->
+    <dimen name="bullection_image_height">120dp</dimen>
+    <dimen name="bullection_tv_marginTop">70dp</dimen>
+    <dimen name="bullection_tv_marginLeft">10dp</dimen>
+    <dimen name="bullection_tvToTv_marginTop">5dp</dimen>
+    <dimen name="bullection_Tview_height">25dp</dimen>
+    <dimen name="bullection_Tview_marginTop">10dp</dimen>
+    <dimen name="bullection_list_view">15dp</dimen>
+    <dimen name="bullection_list_image">200dp</dimen>
+    <!--bullection-->
+    <dimen name="bullection_textSize">20dp</dimen>
+    <dimen name="bullection_text_marginLeft">10dp</dimen>
+    <dimen name="bullection_text_two_marginLeft">20dp</dimen>
+    <dimen name="bullection_view_height1">1dp</dimen>
+    <dimen name="bullection_paddingButtom">5dp</dimen>
+    <dimen name="bullection_paddingTop">5dp</dimen>
+
 </resources>

@@ -211,4 +211,5 @@ public class NewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public interface OnClickListenerRecycler {
         void onClickRecycler(int id,int mediaType);
     }
+
 }

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/bullection_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bullection_list_view"
+        android:background="@color/bullection_view_T" />
+
+    <ImageView
+        android:id="@+id/bullection_headings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bullection_list_view"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/bullection_newsauthoridSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/bullection_headings"
+        android:layout_marginLeft="@dimen/bullection_tv_marginLeft"
+        android:layout_toRightOf="@id/bullection_headings"
+        android:text="3333" />
+
+    <TextView
+        android:id="@+id/bullection_createtimeSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/bullection_headings"
+        android:layout_marginLeft="@dimen/bullection_tv_marginLeft"
+        android:layout_toRightOf="@id/bullection_headings"
+        android:text="3333" />
+
+    <TextView
+        android:id="@+id/bullection_summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bullection_headings"
+        android:layout_marginTop="@dimen/bullection_Tview_marginTop"
+        android:text="444" />
+
+    <ImageView
+        android:id="@+id/bullection_list_heading"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bullection_list_image"
+        android:layout_below="@id/bullection_summary"
+        android:layout_marginTop="@dimen/bullection_Tview_marginTop" />
+</RelativeLayout>

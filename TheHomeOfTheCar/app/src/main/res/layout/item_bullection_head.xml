@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="@dimen/fragment_recommend_news_marginLeftAndRight"
+    android:layout_marginRight="@dimen/fragment_recommend_news_marginLeftAndRight">
+
+    <ImageView
+        android:id="@+id/bullection_img"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bullection_image_height"
+        android:background="@mipmap/ic_launcher"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/bullection_newstypename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/bullection_tv_marginTop"
+        android:text="111"
+        android:textSize="@dimen/item_title" />
+
+    <TextView
+        android:id="@+id/bullection_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/bullection_tv_marginLeft"
+        android:layout_marginTop="@dimen/bullection_tv_marginTop"
+        android:layout_toRightOf="@id/bullection_newstypename"
+        android:text="111"
+        android:textSize="@dimen/item_title" />
+
+    <TextView
+        android:id="@+id/bullection_newsauthorid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bullection_newstypename"
+        android:layout_marginTop="@dimen/bullection_tvToTv_marginTop"
+        android:text="11" />
+
+    <TextView
+        android:id="@+id/bullection_review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/bullection_newsauthorid"
+        android:layout_below="@id/bullection_newstypename"
+        android:layout_marginLeft="@dimen/bullection_tv_marginLeft"
+        android:layout_toRightOf="@id/bullection_newsauthorid"
+        android:text="111" />
+
+    <TextView
+        android:id="@+id/bullection_car_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bullection_Tview_height"
+        android:layout_below="@id/bullection_newsauthorid"
+        android:background="@color/bullection_view_T"
+        android:text="相关车系" />
+
+    <TextView
+
+        android:id="@+id/bullection_car_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bullection_Tview_height"
+        android:layout_below="@id/bullection_car_tv"
+        android:background="@color/bullection_view_T"
+        android:text="快报内容" />
+
+    <RelativeLayout
+        android:id="@+id/bullection_detial_ra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bullection_car_content">
+
+        <ImageView
+            android:id="@+id/bullection_headingSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/bullection_newsauthoridSmalls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/bullection_headingSmall"
+            android:layout_marginLeft="@dimen/bullection_tv_marginLeft"
+            android:layout_toRightOf="@id/bullection_headingSmall"
+            android:text="3333" />
+
+        <TextView
+            android:id="@+id/bullection_createtimeSmalls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/bullection_headingSmall"
+            android:layout_marginLeft="@dimen/bullection_tv_marginLeft"
+            android:layout_toRightOf="@id/bullection_headingSmall"
+            android:text="3333" />
+
+        <TextView
+            android:id="@+id/bullection_summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bullection_headingSmall"
+            android:layout_marginTop="@dimen/bullection_Tview_marginTop"
+            android:text="444" />
+
+    </RelativeLayout>
+</RelativeLayout>

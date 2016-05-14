@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/fragment_recommend_news_marginLeftAndRight"
+    android:layout_marginRight="@dimen/fragment_recommend_news_marginLeftAndRight"
+    android:orientation="vertical">
 
-</LinearLayout>
+
+
+
+    <ListView
+        android:id="@+id/bullection_detial_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       />
+</RelativeLayout>
