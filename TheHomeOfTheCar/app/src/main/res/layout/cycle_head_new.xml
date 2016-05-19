@@ -16,7 +16,7 @@
         <LinearLayout
             android:id="@+id/point_container"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/cycle_vp"
+            android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:gravity="center"
             android:orientation="horizontal"

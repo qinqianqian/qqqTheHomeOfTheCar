@@ -56,10 +56,28 @@
     <dimen name="bullection_list_image">200dp</dimen>
     <!--bullection-->
     <dimen name="bullection_textSize">20dp</dimen>
+    <!--全部品牌与选择器的间距-->
     <dimen name="bullection_text_marginLeft">10dp</dimen>
     <dimen name="bullection_text_two_marginLeft">20dp</dimen>
     <dimen name="bullection_view_height1">1dp</dimen>
     <dimen name="bullection_paddingButtom">5dp</dimen>
     <dimen name="bullection_paddingTop">5dp</dimen>
 
+    <!--视频-->
+    <dimen name="video_selector_marginLeft">10dp</dimen>
+    <dimen name="video_selector_tvSize">20dp</dimen>
+
+    <!--用车 三张图的详情-->
+    <dimen name="useCar_viewPager_height">250dp</dimen>
+    <dimen name="useCar_tv_marginTop">30dp</dimen>
+    <dimen name="useCar_tv_marginLeftAndRight">20dp</dimen>
+    <dimen name="useCar_tvTotv_marginTop">15dp</dimen>
+    <dimen name="useCar_tvReplyCountSize">10sp</dimen>
+    <dimen name="useCar_tvReplyCountMarginBottom">30dp</dimen>
+    <dimen name="useCar_tvReplyCountRight">20dp</dimen>
+    <dimen name="useCar_scoller_height">85dp</dimen>
+    <dimen name="uescar_recover_padding">20dp</dimen>
+
+    <!--热帖-->
+    <dimen name="forum_tab_marginLeft">10dp</dimen>
 </resources>

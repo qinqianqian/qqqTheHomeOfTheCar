@@ -13,6 +13,7 @@ public class ForumAdapter extends FragmentPagerAdapter {
     List<Fragment> fragments;
 
     public  final String titles[]={"精选推荐","热帖","常用论坛"};
+
     public void setFragments(List<Fragment> fragments) {
         this.fragments = fragments;
         notifyDataSetChanged();

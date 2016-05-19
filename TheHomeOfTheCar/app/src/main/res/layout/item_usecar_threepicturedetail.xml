@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack">
+    <ImageView
+        android:id="@+id/usecar_image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/useCar_viewPager_height"
+        android:layout_centerInParent="true"
+        android:background="@mipmap/ic_launcher">
+
+    </ImageView>
+
+   <!-- <TextView
+
+        android:textColor="@color/colorWhite"
+        android:id="@+id/usecar_tv_title1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usecar_image"
+        android:layout_marginLeft="@dimen/useCar_tv_marginLeftAndRight"
+        android:layout_marginRight="@dimen/useCar_tv_marginLeftAndRight"
+        android:layout_marginTop="@dimen/useCar_tv_marginTop"
+        android:text="1118u46856ku765uyrrtytrjyr6jyrtjyryrtjytrjyrjyrjyrjyrtjy"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="@dimen/item_title" />
+
+    <TextView
+        android:textColor="@color/colorWhite"
+        android:id="@+id/usecar_tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usecar_tv_title1"
+        android:layout_marginLeft="@dimen/useCar_tv_marginLeftAndRight"
+        android:layout_marginRight="@dimen/useCar_tv_marginLeftAndRight"
+        android:layout_marginTop="@dimen/useCar_tvTotv_marginTop" />-->
+
+</RelativeLayout>

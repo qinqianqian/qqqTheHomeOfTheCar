@@ -2,6 +2,7 @@ package com.qqq.thehomeofthecar.fragment;
 
 import android.graphics.Color;
 import android.support.design.widget.TabLayout;
+
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.view.View;
@@ -23,6 +24,9 @@ import java.util.List;
  */
 public class RecommendFragment extends BaseFragment {
     private RecommendAdapter recommendAdapter;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
+
     @Override
     public int setLayout() {
         return R.layout.fragment_recommend;
@@ -30,15 +34,10 @@ public class RecommendFragment extends BaseFragment {
 
     @Override
     protected void initView(View view) {
-        ViewPager viewPager=bindView(R.id.recommend_vp);
-        TabLayout tabLayout=bindView(R.id.recommend_tab);
+        viewPager = bindView(R.id.recommend_vp);
+        tabLayout = bindView(R.id.recommend_tab);
         recommendAdapter=new RecommendAdapter(getChildFragmentManager());
-        viewPager.setAdapter(recommendAdapter);
 
-        tabLayout.setupWithViewPager(viewPager);
-        tabLayout.setTabTextColors(0x99555555,getResources().getColor(R.color.colorTab));
-        //设置引导线的颜色
-        tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.colorTab));
     }
 
     @Override
@@ -55,5 +54,13 @@ public class RecommendFragment extends BaseFragment {
         fragments.add(new NewsFragment());
         fragments.add(new UseCarFragment());
         recommendAdapter.setFragments(fragments);
+
+
+        viewPager.setAdapter(recommendAdapter);
+
+        tabLayout.setupWithViewPager(viewPager);
+        tabLayout.setTabTextColors(0x99555555,getResources().getColor(R.color.colorTab));
+        //设置引导线的颜色
+        tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.colorTab));
     }
 }

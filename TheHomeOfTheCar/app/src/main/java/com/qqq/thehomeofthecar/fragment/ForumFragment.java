@@ -21,6 +21,9 @@ import java.util.List;
 public class ForumFragment extends BaseFragment{
     private List<Fragment> fragments;
     private ForumAdapter forumAdapter;
+    private ViewPager viewPager;
+    private TabLayout tabLayout;
+
     @Override
     public int setLayout() {
         return R.layout.fragment_forum;
@@ -28,15 +31,13 @@ public class ForumFragment extends BaseFragment{
 
     @Override
     protected void initView(View view) {
-        ViewPager viewPager=bindView(R.id.forum_vp);
-        TabLayout tabLayout=bindView(R.id.forum_tab);
-        forumAdapter=new ForumAdapter(getChildFragmentManager());
+        viewPager = bindView(R.id.forum_vp);
+        tabLayout = bindView(R.id.forum_tab);
 
-        viewPager.setAdapter(forumAdapter);
-        tabLayout.setupWithViewPager(viewPager);
-        tabLayout.setTabTextColors(0x99555555,getResources().getColor(R.color.colorTab));
+
+//        tabLayout.setTabTextColors(0x99555555,getResources().getColor(R.color.colorTab));
         //设置引导线的颜色
-        tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.colorTab));
+//        tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.colorTab));
 
     }
 
@@ -46,7 +47,10 @@ public class ForumFragment extends BaseFragment{
         fragments.add(new SelectionedForumFragment());
         fragments.add(new TopPostsForumFragment());
         fragments.add(new BBSForumFragment());
-        forumAdapter.setFragments(fragments);
 
+        forumAdapter=new ForumAdapter(getChildFragmentManager());
+        forumAdapter.setFragments(fragments);
+        viewPager.setAdapter(forumAdapter);
+        tabLayout.setupWithViewPager(viewPager);
     }
 }

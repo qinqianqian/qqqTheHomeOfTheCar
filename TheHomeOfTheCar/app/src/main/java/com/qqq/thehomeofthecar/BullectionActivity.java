@@ -52,7 +52,7 @@ public class BullectionActivity extends BaseActivity {
         createTime = (TextView) headerView.findViewById(R.id.bullection_createtimeSmalls);
         heading = (ImageView) headerView.findViewById(R.id.bullection_headingSmall);
         summary= (TextView) headerView.findViewById(R.id.bullection_summary);
-        img= (ImageView) headerView.findViewById(bullection_img);
+        img= (ImageView) headerView.findViewById(R.id.bullection_img);
         listView.addHeaderView(headerView);
 
         bullectionDetailAdapter=new BullectionDetailAdapter(this);
@@ -63,6 +63,7 @@ public class BullectionActivity extends BaseActivity {
     protected void initData() {
         Intent intent = getIntent();
         String path = intent.getStringExtra("path");
+      //  Log.d("BullectionActivity", path);
         request(path);
 
     }

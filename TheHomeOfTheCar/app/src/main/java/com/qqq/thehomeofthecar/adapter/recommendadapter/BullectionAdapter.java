@@ -11,6 +11,8 @@ import android.widget.TextView;
 import com.qqq.thehomeofthecar.R;
 import com.qqq.thehomeofthecar.bean.BullectionFragmetBean;
 
+import java.util.List;
+
 import it.sephiroth.android.library.picasso.Picasso;
 
 /**
@@ -19,7 +21,6 @@ import it.sephiroth.android.library.picasso.Picasso;
 public class BullectionAdapter extends BaseAdapter {
     private BullectionFragmetBean bullectionFragmetBean;
     private Context context;
-
 
     public BullectionAdapter(Context context) {
         this.context = context;
@@ -31,17 +32,9 @@ public class BullectionAdapter extends BaseAdapter {
         notifyDataSetChanged();
     }
 
-    public void addBullectionFragmetBean(BullectionFragmetBean bullectionFragmetBean1) {
-        for (int i = 0; i < bullectionFragmetBean1.getResult().getList().size(); i++) {
-            bullectionFragmetBean.getResult().getList().add(bullectionFragmetBean1.getResult().getList().get(i));
-        }
-        notifyDataSetChanged();
-    }
-
     @Override
     public int getCount() {
         return bullectionFragmetBean == null ? 0 : bullectionFragmetBean.getResult().getList().size();
-
     }
 
     @Override

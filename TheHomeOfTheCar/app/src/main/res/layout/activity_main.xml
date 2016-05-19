@@ -77,15 +77,13 @@
         </LinearLayout>
     </FrameLayout>
 
-    <TextView
-        android:id="@+id/main_lv"
-        android:background="@color/drawer"
-        android:layout_width="@dimen/drawer"
+    <LinearLayout
+        android:id="@+id/drawer"
+        android:background="@color/colorWhite"
+        android:layout_width="280dp"
         android:layout_height="match_parent"
-        android:layout_gravity="end"
-        android:text="333">
+        android:layout_gravity="end">
 
-    </TextView>
-
-
+        <include layout="@layout/item_drawer_layout" />
+    </LinearLayout>
 </android.support.v4.widget.DrawerLayout>

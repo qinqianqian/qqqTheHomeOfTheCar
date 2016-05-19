@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/drawer_allbrand_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bullection_list_view"
+        android:background="@color/bullection_view_T" />
+
+    <TextView
+        android:id="@+id/drawer_allbrand_firstword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="R" />
+
+    <TextView
+        android:id="@+id/drawer_allbrand_allword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="荣威" />
+</LinearLayout>

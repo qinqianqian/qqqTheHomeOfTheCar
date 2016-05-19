@@ -6,9 +6,6 @@
     android:layout_marginRight="@dimen/fragment_recommend_news_marginLeftAndRight"
     android:orientation="vertical">
 
-
-
-
     <ListView
         android:id="@+id/bullection_detial_lv"
         android:layout_width="match_parent"

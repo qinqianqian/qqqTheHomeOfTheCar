@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">汽车之家</string>
     <string name="fragment_news_item_three">图说</string>
+    <string name="forum_all">全部</string>
+    <string name="forum_wife">媳妇当车模</string>
+    <string name="forum_beauty">美人"记"</string>
+
 </resources>

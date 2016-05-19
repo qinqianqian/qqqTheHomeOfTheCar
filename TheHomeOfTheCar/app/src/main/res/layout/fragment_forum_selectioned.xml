@@ -1,10 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<TextView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:text="推荐"/>
+    android:orientation="vertical">
 
+    <HorizontalScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bullection_view_T">
+
+        <RadioGroup
+            android:layout_marginLeft="@dimen/forum_tab_marginLeft"
+
+            android:id="@+id/select_radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+
+                android:id="@+id/select_radio_all"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:button="@null"
+                android:text="@string/forum_all" />
+
+            <RadioButton
+
+                android:id="@+id/select_radio_1"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:button="@null"
+                android:text="@string/forum_wife" />
+
+            <RadioButton
+                android:id="@+id/select_radio_4"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:button="@null"
+                android:text="@string/forum_beauty" />
+
+            <RadioButton
+                android:id="@+id/select_radio_2"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:button="@null"
+                android:text="2" />
+
+            <RadioButton
+                android:id="@+id/select_radio_3"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:button="@null"
+                android:text="3" />
+
+            <RadioButton
+                android:id="@+id/select_radio_6"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:button="@null"
+                android:text="6" />
+        </RadioGroup>
+    </HorizontalScrollView>
+
+    <FrameLayout
+        android:id="@+id/frgment_forum_all"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
 </LinearLayout>

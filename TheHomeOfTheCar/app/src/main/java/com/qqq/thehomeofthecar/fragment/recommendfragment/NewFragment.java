@@ -8,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +20,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.Volley;
-import com.bartoszlipinski.recyclerviewheader.RecyclerViewHeader;
+import com.bartoszlipinski.recyclerviewheader2.RecyclerViewHeader;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -53,7 +54,7 @@ public class NewFragment extends BaseFragment implements NewAdapter.OnClickListe
     //轮播图
     private List<ImageView> views = new ArrayList<ImageView>();
     private CycleViewPager cycleViewPager;
-    private List<String> infos = new ArrayList<>();
+    private List<String> infos ;
     private CycleAdapter cycleAdapter;
     private ViewPager viewPager;
     private RecyclerViewHeader header;
@@ -75,12 +76,13 @@ public class NewFragment extends BaseFragment implements NewAdapter.OnClickListe
 
         newAdapter = new NewAdapter(getContext());
         recyclerView = bindView(R.id.new_recycler);
+     //   header = RecyclerViewHeader.fromXml(context, R.layout.cycle_head_new);
+//        header=bindView(R.id.cycle_head);
+RecyclerViewHeader header = (RecyclerViewHeader) getView().findViewById(R.id.cycle_head);
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
-        header = RecyclerViewHeader.fromXml(context, R.layout.cycle_head_new);
-
-        //头布局 加载部件
         viewPager = (ViewPager) header.findViewById(R.id.cycle_viewpager);
         pointRoot = (LinearLayout) header.findViewById(R.id.point_container);
+        //头布局 加载部件
         header.attachTo(recyclerView);
 
         recyclerView.addItemDecoration(new DividerItemDecoration(context, DividerItemDecoration.VERTICAL_LIST));
@@ -101,27 +103,33 @@ public class NewFragment extends BaseFragment implements NewAdapter.OnClickListe
                 }, new Response.Listener<NewFragmentBean>() {
             @Override
             public void onResponse(NewFragmentBean response) {
+
+                infos = new ArrayList<>();
+
+                for (int i = 0; i < response.getResult().getFocusimg().size(); i++) {
+                    String imageUrl = response.getResult().getFocusimg().get(i).getImgurl();
+                    infos.add(imageUrl);
+                }
+
                 //成功的时候执行的
                 newAdapter.setNewFragmentBean(response);
                 //initialize(response);
                 handerWay(response);//方法加载数据
-
             }
         }, NewFragmentBean.class);
         requestQueue.add(gsonRequest);
+
+
 
 
     }
 
     private void handerWay(final NewFragmentBean newFragmentBean) {
 
-        for (int i = 0; i < newFragmentBean.getResult().getFocusimg().size(); i++) {
-            String imageUrl = newFragmentBean.getResult().getFocusimg().get(i).getImgurl();
-            infos.add(imageUrl);
-        }
+
         cycleAdapter = new CycleAdapter(infos, getContext());
         viewPager.setAdapter(cycleAdapter);
-        viewPager.setCurrentItem(0);
+        viewPager.setCurrentItem(300);
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -177,6 +185,8 @@ public class NewFragment extends BaseFragment implements NewAdapter.OnClickListe
      */
     private void getPoint() {
         for (int i = 0; i < infos.size(); i++) {
+
+
             ImageView pointIv = new ImageView(context);
             pointIv.setPadding(5, 5, 5, 5);
             LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(30, 30);
