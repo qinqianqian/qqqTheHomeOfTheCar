@@ -1,6 +1,7 @@
 package com.qqq.thehomeofthecar.util;
 
 import android.content.Context;
+import android.widget.ImageView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -8,6 +9,8 @@ import com.android.volley.Response;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.nostra13.universalimageloader.utils.L;
+
+import it.sephiroth.android.library.picasso.Picasso;
 
 /**
  * Created by 秦谦谦 on 16/5/16 10:36.
@@ -77,4 +80,6 @@ public class VolleySingle {
     public  static <T> void  addRequest(String url, Class<T> mClass, Response.Listener<T> listener, Response.ErrorListener errorListener){
         getInstance()._addRequest(url,mClass,listener,errorListener);
     }
+
 }
+

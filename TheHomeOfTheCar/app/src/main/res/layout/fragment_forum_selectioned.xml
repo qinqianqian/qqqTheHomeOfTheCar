@@ -19,12 +19,13 @@
             android:orientation="horizontal">
 
             <RadioButton
-
+                android:clickable="true"
                 android:id="@+id/select_radio_all"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:button="@null"
-                android:text="@string/forum_all" />
+                android:text="@string/forum_all"
+               />
 
             <RadioButton
 
@@ -33,7 +34,8 @@
                 android:layout_height="40dp"
                 android:layout_marginLeft="20dp"
                 android:button="@null"
-                android:text="@string/forum_wife" />
+                android:text="@string/forum_wife"
+               />
 
             <RadioButton
                 android:id="@+id/select_radio_4"
@@ -41,7 +43,8 @@
                 android:layout_height="40dp"
                 android:layout_marginLeft="20dp"
                 android:button="@null"
-                android:text="@string/forum_beauty" />
+                android:text="@string/forum_beauty"
+              />
 
             <RadioButton
                 android:id="@+id/select_radio_2"
@@ -49,7 +52,8 @@
                 android:layout_height="40dp"
                 android:layout_marginLeft="20dp"
                 android:button="@null"
-                android:text="2" />
+                android:text="2"
+                />
 
             <RadioButton
                 android:id="@+id/select_radio_3"
@@ -57,7 +61,8 @@
                 android:layout_height="40dp"
                 android:layout_marginLeft="20dp"
                 android:button="@null"
-                android:text="3" />
+                android:text="3"
+              />
 
             <RadioButton
                 android:id="@+id/select_radio_6"
@@ -65,14 +70,15 @@
                 android:layout_height="40dp"
                 android:layout_marginLeft="20dp"
                 android:button="@null"
-                android:text="6" />
+                android:text="6"
+               />
         </RadioGroup>
+
     </HorizontalScrollView>
 
     <FrameLayout
         android:id="@+id/frgment_forum_all"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
     </FrameLayout>
 </LinearLayout>

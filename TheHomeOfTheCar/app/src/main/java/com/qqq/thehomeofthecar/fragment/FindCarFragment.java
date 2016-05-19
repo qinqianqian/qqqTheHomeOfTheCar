@@ -23,6 +23,9 @@ import java.util.List;
 public class FindCarFragment extends BaseFragment {
     private FindCarAdapter findCarAdapter;
     private List<Fragment> fragments;
+    private ViewPager viewPager;
+    private TabLayout tabLayout;
+
     @Override
     public int setLayout() {
         return R.layout.fragment_findcar;
@@ -30,14 +33,10 @@ public class FindCarFragment extends BaseFragment {
 
     @Override
     protected void initView(View view) {
-        ViewPager viewPager=bindView(R.id.findcar_vp);
-        TabLayout tabLayout=bindView(R.id.findcar_tab);
+        viewPager = bindView(R.id.findcar_vp);
+        tabLayout = bindView(R.id.findcar_tab);
         findCarAdapter=new FindCarAdapter(getChildFragmentManager());
-        viewPager.setAdapter(findCarAdapter);
-        tabLayout.setupWithViewPager(viewPager);
-        tabLayout.setTabTextColors(0x99555555,getResources().getColor(R.color.colorTab));
-        //设置引导线的颜色
-        tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.colorTab));
+
 
     }
 
@@ -49,6 +48,11 @@ public class FindCarFragment extends BaseFragment {
         fragments.add(new DepreciateFindCarFragment());
         fragments.add(new FindUesdCarFindCarFragment());
         findCarAdapter.setFragments(fragments);
+        viewPager.setAdapter(findCarAdapter);
+        tabLayout.setupWithViewPager(viewPager);
+        tabLayout.setTabTextColors(0x99555555,getResources().getColor(R.color.colorTab));
+        //设置引导线的颜色
+        tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.colorTab));
 
     }
 }

@@ -16,8 +16,9 @@
     <!--大的标题和小的时间等-->
     <dimen name="item_title">20sp</dimen>
     <dimen name="item_timeAndReply">15sp</dimen>
-    <!--item的左边距和右边距-->
+    <!--item的左边距和右边距(命名不规范)-->
     <dimen name="fragment_recommend_news_marginLeftAndRight">10dp</dimen>
+
     <dimen name="item_paddingBottomAndTop">5dp</dimen>
     <dimen name="item_tv_padding_left">5dp</dimen>
     <dimen name="item_threeImage_marginRightAndLeft">20dp</dimen>
@@ -80,4 +81,24 @@
 
     <!--热帖-->
     <dimen name="forum_tab_marginLeft">10dp</dimen>
+
+    <!--shape 矩形-->
+    <dimen name="shape_width">60dp</dimen>
+    <dimen name="shape_height">30dp</dimen>
+    <dimen name="shape_stroke_width">1dp</dimen>
+
+    <dimen name="bullection_rect_marginLeft">10dp</dimen>
+    <dimen name="bullection_agree_marginTop">30dp</dimen>
+    <dimen name="bullection_comment_marginTop">10dp</dimen>
+    <dimen name="bullection_shape_widthAndheight">15dp</dimen>
+    <dimen name="bullection_shape_firstTv_marginLeft">10dp</dimen>
+    <dimen name="bullection_shape_first_marginLeft">30dp</dimen>
+    <dimen name="bullection_shape_second_marginLeft">35dp</dimen>
+    <dimen name="bullection_shape_second_marginLeftTv">15dp</dimen>
+
+    <dimen name="bullection_comment_marginLeft">10dp</dimen>
+    <dimen name="bullection_commment_tvSize">15sp</dimen>
+
+    <dimen name="bullection_detail_image">60dp</dimen>
+
 </resources>

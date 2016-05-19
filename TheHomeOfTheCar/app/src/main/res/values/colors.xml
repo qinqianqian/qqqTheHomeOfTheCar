@@ -10,6 +10,9 @@
     <color name="colorWhite">#ffffff</color>
     <!--快报类型名字颜色-->
     <color name="color_bullection_typename">#5c81d1</color>
+    <!--快报详情背景颜色-->
+    <color name="color_bullection_backcolor">#f8f8f8</color>
+    <color name="color_bullection_pushcolor">#f4f4f4</color>
     <!--抽屉的背景颜色-->
     <color name="drawer">#ffffff</color>
     <color name="bullection_view">#868686</color>

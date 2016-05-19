@@ -303,7 +303,7 @@ public class BullectionDetailBean {
              */
 
             private List<AttachmentsBean> attachments;
-            private List<?> commentlist;
+            private List<CommentBean> commentlist;
 
             public int getMessageid() {
                 return messageid;
@@ -417,14 +417,44 @@ public class BullectionDetailBean {
                 this.attachments = attachments;
             }
 
-            public List<?> getCommentlist() {
+            public List<CommentBean> getCommentlist() {
                 return commentlist;
             }
 
-            public void setCommentlist(List<?> commentlist) {
+            public void setCommentlist(List<CommentBean> commentlist) {
                 this.commentlist = commentlist;
             }
+            public static class CommentBean{
+                private String headimg;
+                private String content;
+                private String username;
 
+                public String getUsername() {
+                    return username;
+                }
+
+                public void setUsername(String username) {
+                    this.username = username;
+                }
+
+                public String getHeadimg() {
+                    return headimg;
+                }
+
+                public void setHeadimg(String headimg) {
+                    this.headimg = headimg;
+                }
+
+                public String getContent() {
+                    return content;
+                }
+
+                public void setContent(String content) {
+                    this.content = content;
+                }
+
+
+            }
             public static class AttachmentsBean {
                 private int attachtype;
                 private String picurl;

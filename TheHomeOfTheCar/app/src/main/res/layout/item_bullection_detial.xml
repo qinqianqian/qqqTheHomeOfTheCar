@@ -2,6 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/fragment_recommend_news_marginLeftAndRight"
+    android:layout_marginRight="@dimen/fragment_recommend_news_marginLeftAndRight"
     android:orientation="vertical">
 
     <View
@@ -43,10 +45,222 @@
         android:layout_marginTop="@dimen/bullection_Tview_marginTop"
         android:text="444" />
 
-    <ImageView
-        android:id="@+id/bullection_list_heading"
+    <RelativeLayout
+        android:id="@+id/bullection_image"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/bullection_list_image"
-        android:layout_below="@id/bullection_summary"
-        android:layout_marginTop="@dimen/bullection_Tview_marginTop" />
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bullection_summary">
+
+        <ImageView
+            android:id="@+id/bullection_list_heading"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bullection_list_image"
+            android:layout_marginTop="@dimen/bullection_Tview_marginTop" />
+
+        <ImageView
+            android:id="@+id/bullection_list_headingpic"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bullection_list_image"
+            android:layout_below="@id/bullection_list_heading"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/bullection_list_headingpic2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bullection_list_image"
+            android:layout_below="@id/bullection_list_headingpic"
+            android:visibility="gone" />
+
+        <VideoView
+            android:id="@+id/bullection_list_headingvideo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bullection_list_image"
+            android:layout_marginTop="@dimen/bullection_Tview_marginTop" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bullection_agree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bullection_image"
+        android:layout_marginTop="@dimen/bullection_agree_marginTop">
+
+        <ImageView
+            android:id="@+id/bullection_upcount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rect_shape"
+            android:text="wwwwwwwwwww" />
+
+        <ImageView
+            android:layout_width="@dimen/bullection_shape_widthAndheight"
+            android:layout_height="@dimen/bullection_shape_widthAndheight"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/bullection_shape_firstTv_marginLeft"
+            android:background="@drawable/good_selector"
+            android:clickable="true" />
+
+        <TextView
+            android:id="@+id/bullection_upcount_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/bullection_shape_first_marginLeft"
+            android:text="23" />
+
+        <ImageView
+            android:id="@+id/bullection_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/bullection_rect_marginLeft"
+            android:layout_toRightOf="@id/bullection_upcount"
+            android:background="@drawable/rect_shape" />
+
+        <ImageView
+
+            android:layout_width="@dimen/bullection_shape_widthAndheight"
+            android:layout_height="@dimen/bullection_shape_widthAndheight"
+            android:layout_alignLeft="@id/bullection_share"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/bullection_shape_second_marginLeft"
+            android:src="@mipmap/share" />
+
+
+        <ImageView
+            android:id="@+id/bullection_agree_replycount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/rect_shape" />
+
+        <ImageView
+            android:layout_width="@dimen/bullection_shape_widthAndheight"
+            android:layout_height="@dimen/bullection_shape_widthAndheight"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/bullection_shape_second_marginLeft"
+            android:src="@mipmap/commen" />
+
+        <TextView
+            android:id="@+id/bullection_comment_replycount"
+            android:layout_width="@dimen/bullection_shape_widthAndheight"
+            android:layout_height="@dimen/bullection_shape_widthAndheight"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/bullection_shape_second_marginLeftTv"
+            android:text="22" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bullection_comment_rela1"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bullection_agree"
+        android:layout_marginTop="@dimen/bullection_comment_marginTop"
+        android:background="@color/color_bullection_backcolor">
+
+        <ImageView
+            android:id="@+id/bullection_comment_heading1"
+            android:layout_width="@dimen/bullection_detail_image"
+            android:layout_height="@dimen/bullection_detail_image"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/bullection_comment_usename1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/bullection_comment_marginLeft"
+            android:layout_toRightOf="@id/bullection_comment_heading1"
+            android:text="徐小凤"
+            android:textColor="@color/color_bullection_typename" />
+
+        <TextView
+            android:id="@+id/bullection_commment_content1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/bullection_comment_heading1"
+            android:layout_marginLeft="@dimen/bullection_comment_marginLeft"
+            android:layout_toRightOf="@id/bullection_comment_heading1"
+            android:text="北汽奔驰" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bullection_comment_rela2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bullection_comment_rela1"
+        android:layout_marginTop="@dimen/bullection_comment_marginTop"
+        android:background="@color/color_bullection_backcolor">
+
+        <ImageView
+            android:id="@+id/bullection_comment_heading2"
+            android:layout_width="@dimen/bullection_detail_image"
+            android:layout_height="@dimen/bullection_detail_image"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/bullection_comment_usename2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/bullection_comment_marginLeft"
+            android:layout_toRightOf="@id/bullection_comment_heading2"
+            android:text="徐小凤"
+            android:textColor="@color/color_bullection_typename" />
+
+        <TextView
+            android:id="@+id/bullection_commment_content2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/bullection_comment_heading2"
+            android:layout_marginLeft="@dimen/bullection_comment_marginLeft"
+            android:layout_toRightOf="@id/bullection_comment_heading2"
+            android:text="北汽奔驰" />
+    </RelativeLayout>
+
+    <RelativeLayout
+
+        android:id="@+id/bullection_comment_rela3"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bullection_comment_rela2"
+        android:layout_marginTop="@dimen/bullection_comment_marginTop"
+        android:background="@color/color_bullection_backcolor">
+
+        <ImageView
+            android:id="@+id/bullection_comment_heading3"
+            android:layout_width="@dimen/bullection_detail_image"
+            android:layout_height="@dimen/bullection_detail_image"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/bullection_comment_usename3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/bullection_comment_marginLeft"
+            android:layout_toRightOf="@id/bullection_comment_heading3"
+            android:text="徐小凤"
+            android:textColor="@color/color_bullection_typename" />
+
+        <TextView
+            android:id="@+id/bullection_commment_content3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/bullection_comment_heading3"
+            android:layout_marginLeft="@dimen/bullection_comment_marginLeft"
+            android:layout_toRightOf="@id/bullection_comment_heading3"
+            android:text="北汽奔驰" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bullection_comment_heading3"
+            android:layout_marginTop="@dimen/bullection_comment_marginTop"
+            android:background="@color/colorWhite"
+            android:hint="发表评论..."
+            android:textSize="@dimen/bullection_commment_tvSize" />
+    </RelativeLayout>
+
+
 </RelativeLayout>

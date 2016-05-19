@@ -83,6 +83,6 @@ public class VideoAdapter extends BaseAdapter {
     }
 
     public void getImage(ImageView imageView, String path) {
-        Picasso.with(context).load(path).placeholder(R.mipmap.ahlib_common_main_filter_icon_f).error(R.mipmap.ahlib_common_main_filter_icon_p).into(imageView);
+        Picasso.with(context).load(path).placeholder(R.mipmap.ahlib_carback).error(R.mipmap.ahlib_page_icon_empty).into(imageView);
     }
 }

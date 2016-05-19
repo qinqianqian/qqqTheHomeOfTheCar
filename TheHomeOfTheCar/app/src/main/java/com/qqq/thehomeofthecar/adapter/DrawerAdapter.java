@@ -16,7 +16,7 @@ import java.util.List;
  */
 public class DrawerAdapter extends BaseAdapter {
     List<String> list;
-private Context context;
+    private Context context;
 
     public DrawerAdapter(Context context) {
         this.context = context;
@@ -29,7 +29,7 @@ private Context context;
 
     @Override
     public int getCount() {
-        return list==null?0:list.size();
+        return list == null ? 0 : list.size();
     }
 
     @Override
@@ -45,20 +45,22 @@ private Context context;
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         MyViewHolder holder;
-        if (convertView==null){
-            convertView= LayoutInflater.from(context).inflate(R.layout.item_detail_drawer,null);
-            holder=new MyViewHolder(convertView);
+        if (convertView == null) {
+            convertView = LayoutInflater.from(context).inflate(R.layout.item_detail_drawer, null);
+            holder = new MyViewHolder(convertView);
             convertView.setTag(holder);
-        }else {
-            holder= (MyViewHolder) convertView.getTag();
+        } else {
+            holder = (MyViewHolder) convertView.getTag();
         }
         holder.textView.setText(list.get(position));
         return convertView;
     }
-    class MyViewHolder{
+
+    class MyViewHolder {
         TextView textView;
-        public MyViewHolder(View itemView){
-            textView= (TextView) itemView.findViewById(R.id.drawer_list_tv);
+
+        public MyViewHolder(View itemView) {
+            textView = (TextView) itemView.findViewById(R.id.drawer_list_tv);
         }
     }
 }

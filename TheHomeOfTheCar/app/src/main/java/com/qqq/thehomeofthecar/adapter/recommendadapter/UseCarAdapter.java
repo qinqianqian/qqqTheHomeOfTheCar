@@ -134,6 +134,6 @@ public class UseCarAdapter extends BaseAdapter {
     }
 
     public void setImage(ImageView image, String path) {
-        Picasso.with(context).load(path).placeholder(R.mipmap.ahlib_common_main_filter_icon_f).error(R.mipmap.ahlib_common_main_filter_icon_p).into(image);
+        Picasso.with(context).load(path).placeholder(R.mipmap.ahlib_carback).error(R.mipmap.ahlib_page_icon_empty).into(image);
     }
 }

@@ -67,6 +67,7 @@
         android:text="快报内容" />
 
     <RelativeLayout
+        android:background="@color/color_bullection_backcolor"
         android:id="@+id/bullection_detial_ra"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
