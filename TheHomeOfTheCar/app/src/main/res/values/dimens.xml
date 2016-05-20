@@ -101,4 +101,30 @@
 
     <dimen name="bullection_detail_image">60dp</dimen>
 
+
+
+    <!--找车__品牌的线性布局宽度-->
+    <dimen name="findcar_brand_width">0dp</dimen>
+
+    <!--收藏等的宽和高-->
+    <dimen name="findCar_brand_tv_marginTop">5dp</dimen>
+    <dimen name="findcar_brand_pic_widthAndHeight">40dp</dimen>
+    <!--热门品牌的图片的宽高-->
+    <dimen name="findCar_brand_hot_widthAndHeight">40dp</dimen>
+    <dimen name="findCar_brand_hot_pading">10dp</dimen>
+
+    <dimen name="findCar_brand_View_thinWidth">1dp</dimen>
+    <dimen  name="findCar_brand_View_fatHeight">35dp</dimen>
+    <dimen  name="findCar_brand_View_margin">10dp</dimen>
+
+    <!--主打车-->
+    <dimen name="findCar_brand_mainCar_width">90dp</dimen>
+    <dimen name="findCar_brand_mainCar_height">60dp</dimen>
+
+    <dimen name="findCar_brand_mainCar_tv_margiTop">10dp</dimen>
+
+    <!--第二层嵌套的listView-->
+    <dimen name="secondLv_padding">10dp</dimen>
+    <dimen name="secondLv_imageWidthAndHeight">50dp</dimen>
+    <dimen name="secondLv_margin">10dp</dimen>
 </resources>

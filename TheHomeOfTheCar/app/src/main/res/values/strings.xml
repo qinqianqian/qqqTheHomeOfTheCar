@@ -5,4 +5,30 @@
     <string name="forum_wife">媳妇当车模</string>
     <string name="forum_beauty">美人"记"</string>
 
+    <!--找车-->
+    <string name="findCar_brand_collection">我的收藏</string>
+    <string name="findCar_brand_history">浏览历史</string>
+    <string name="findCar_brand_ranking">热销排行</string>
+    
+    <string name="findCar_brand_hotBrand">热门品牌</string>
+    <string name="findCar_brand_mainCar">主打车</string>
+    
+    <string name="findCar_brand_hot_dazhong">大众</string>
+    <string name="findCar_brand_hot_bentian">本田</string>
+    <string name="findCar_brand_hot_fengtian">丰田</string>
+    <string name="findCar_brand_hot_xiandai">现代</string>
+    <string name="findCar_brand_hot_aodi">奥迪</string>
+    <string name="findCar_brand_hot_jiliqiche">吉利汽车</string>
+    <string name="findCar_brand_hot_bieke">别克</string>
+    <string name="findCar_brand_hot_futie">福特</string>
+    <string name="findCar_brand_hot_hafu">哈弗</string>
+    <string name="findCar_brand_hot_richan">日产</string>
+
+    <string name="findCar_brand_mainCar_biyadiyuan">比亚迪元</string>
+    <string name="findCar_brand_mainCar_linken">林肯MKZ</string>
+    <string name="findCar_brand_mainCar_xindong">昕动</string>
+
+
+
+
 </resources>

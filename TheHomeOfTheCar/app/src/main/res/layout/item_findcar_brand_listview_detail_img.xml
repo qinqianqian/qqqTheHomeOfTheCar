@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+  >
+
+    <ImageView
+        android:id="@+id/secondLv_imgurl"
+        android:layout_width="@dimen/secondLv_imageWidthAndHeight"
+        android:layout_height="@dimen/secondLv_imageWidthAndHeight"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginLeft="@dimen/secondLv_margin"
+        android:layout_marginRight="@dimen/secondLv_margin"/>
+
+    <TextView
+        android:id="@+id/secondLv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/secondLv_margin"
+        android:layout_toRightOf="@id/secondLv_imgurl"
+        android:text="AODI"
+       />
+    <View
+        android:layout_below="@id/secondLv_imgurl"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/findCar_brand_View_margin"
+        android:layout_marginRight="@dimen/findCar_brand_View_margin"
+        android:background="@color/findCar_brand_ViewColor" />
+</RelativeLayout>

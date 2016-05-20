@@ -67,60 +67,63 @@ public class BullectionDetailAdapter extends BaseAdapter {
         holder.content.setText(bullectionDetailBean.getResult().getMessagelist().get(position).getContent());
         holder.publishTime.setText(bullectionDetailBean.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 /**/getResult().getMessagelist().get(position).getPublishtime());
         setImage(holder.heading, bullectionDetailBean.getResult().getMessagelist().get(position).getHeadimg());
-        if (bullectionDetailBean.getResult().getMessagelist().get(position).getAttachments().get(0).getAttachtype()==0){
+        if (bullectionDetailBean.getResult().getMessagelist().get(position).getAttachments().get(0).getAttachtype() == 0) {
             holder.headingVideo.setVisibility(View.GONE);
-            if (bullectionDetailBean.getResult().getMessagelist().get(position).getAttachments().size()==1){
+            if (bullectionDetailBean.getResult().getMessagelist().get(position).getAttachments().size() == 1) {
                 holder.headingPic.setVisibility(View.GONE);
                 holder.headingPic2.setVisibility(View.GONE);
-            }else if (bullectionDetailBean.getResult().getMessagelist().get(position).getAttachments().size()==2){
+            } else if (bullectionDetailBean.getResult().getMessagelist().get(position).getAttachments().size() == 2) {
                 holder.headingPic2.setVisibility(View.GONE);
                 holder.headingPic.setVisibility(View.VISIBLE);
-                setImage(holder.headingPic,bullectionDetailBean.getResult().getMessagelist().get(position).getAttachments().get(1).getPicurl());
-            }else {
+                setImage(holder.headingPic, bullectionDetailBean.getResult().getMessagelist().get(position).getAttachments().get(1).getPicurl());
+            } else {
                 holder.headingPic2.setVisibility(View.VISIBLE);
                 holder.headingPic.setVisibility(View.VISIBLE);
-                setImage(holder.headingPic,bullectionDetailBean.getResult().getMessagelist().get(position).getAttachments().get(1).getPicurl());
-               setImage(holder.headingPic2,bullectionDetailBean.getResult().getMessagelist().get(position).getAttachments().get(2).getPicurl());
+                setImage(holder.headingPic, bullectionDetailBean.getResult().getMessagelist().get(position).getAttachments().get(1).getPicurl());
+                setImage(holder.headingPic2, bullectionDetailBean.getResult().getMessagelist().get(position).getAttachments().get(2).getPicurl());
 
             }
             holder.picurl.setVisibility(View.VISIBLE);
             setImage(holder.picurl, bullectionDetailBean.getResult().getMessagelist().get(position).getAttachments().get(0).getPicurl());
-        }else {
+        } else {
             holder.headingPic2.setVisibility(View.GONE);
             holder.picurl.setVisibility(View.GONE);
             holder.headingPic.setVisibility(View.GONE);
+
+            //视频
             holder.headingVideo.setVisibility(View.VISIBLE);
             holder.headingVideo.setMediaController(new MediaController(context));
             holder.headingVideo.setVideoURI(Uri.parse(bullectionDetailBean.getResult().getMessagelist().get(position).getAttachments().get(0).getVideourl()));
             holder.headingVideo.start();
             holder.headingVideo.requestFocus();
         }
-        if (bullectionDetailBean.getResult().getMessagelist().get(position).getCommentlist().get(0).getHeadimg().length()!=0){
-            setImage(holder.head1,bullectionDetailBean.getResult().getMessagelist().get(position).getCommentlist().get(0).getHeadimg());
-        }else {
-            holder.head1.setImageResource(R.mipmap.photot);
+        if (bullectionDetailBean.getResult().getMessagelist().get(position).getCommentlist().size()==3){
+
+            if (bullectionDetailBean.getResult().getMessagelist().get(position).getCommentlist().get(1).getHeadimg().length() != 0) {
+
+                setImage(holder.head2, bullectionDetailBean.getResult().getMessagelist().get(position).getCommentlist().get(1).getHeadimg());
+            } else {
+                holder.head2.setImageResource(R.mipmap.ahlib_userpic_default);
+            }
+        if (bullectionDetailBean.getResult().getMessagelist().get(position).getCommentlist().get(0).getHeadimg().length() != 0) {
+            setImage(holder.head1, bullectionDetailBean.getResult().getMessagelist().get(position).getCommentlist().get(0).getHeadimg());
+        } else {
+            holder.head1.setImageResource(R.mipmap.ahlib_userpic_default);
+        }
+        if (bullectionDetailBean.getResult().getMessagelist().get(position).getCommentlist().get(2).getHeadimg().length() != 0) {
+
+            setImage(holder.head3, bullectionDetailBean.getResult().getMessagelist().get(position).getCommentlist().get(2).getHeadimg());
+        } else {
+            holder.head3.setImageResource(R.mipmap.ahlib_userpic_default);
         }
 
-
-        if (bullectionDetailBean.getResult().getMessagelist().get(position).getCommentlist().get(1).getHeadimg().length()!=0){
-
-            setImage(holder.head2,bullectionDetailBean.getResult().getMessagelist().get(position).getCommentlist().get(1).getHeadimg());
-        }else {
-            holder.head2.setImageResource(R.mipmap.photot);
         }
-        if (bullectionDetailBean.getResult().getMessagelist().get(position).getCommentlist().get(2).getHeadimg().length()!=0){
-
-            setImage(holder.head3,bullectionDetailBean.getResult().getMessagelist().get(position).getCommentlist().get(2).getHeadimg());
-        }else {
-            holder.head3.setImageResource(R.mipmap.photot);
-        }
-
         holder.content1.setText(bullectionDetailBean.getResult().getMessagelist().get(position)
-        .getCommentlist().get(0).getContent());
+                .getCommentlist().get(0).getContent());
         holder.content2.setText(bullectionDetailBean.getResult().getMessagelist().get(position)
-        .getCommentlist().get(1).getContent());
+                .getCommentlist().get(1).getContent());
         holder.content3.setText(bullectionDetailBean.getResult().getMessagelist().get(position)
-        .getCommentlist().get(2).getContent());
+                .getCommentlist().get(2).getContent());
 
         holder.useName1.setText(bullectionDetailBean.getResult().getMessagelist().get(position
         ).getCommentlist().get(0).getUsername());
@@ -130,18 +133,17 @@ public class BullectionDetailAdapter extends BaseAdapter {
         ).getCommentlist().get(2).getUsername());
 
         holder.upCount.setText(bullectionDetailBean.getResult().getMessagelist()
-        .get(position).getUpcount()+"");
+                .get(position).getUpcount() + "");
         holder.commentReplyCount.setText(bullectionDetailBean.getResult().getMessagelist().get(position
-        ).getReplycount()+"");
-
+        ).getReplycount() + "");
 
 
         return convertView;
     }
 
     class MyViewHolder {
-        ImageView heading, picurl, headingPic, head1, head2, head3,headingPic2;
-        TextView authorName, publishTime, content, upCount, useName1, useName2, useName3, content1, content2, content3,commentReplyCount;
+        ImageView heading, picurl, headingPic, head1, head2, head3, headingPic2;
+        TextView authorName, publishTime, content, upCount, useName1, useName2, useName3, content1, content2, content3, commentReplyCount;
         VideoView headingVideo;
 
         public MyViewHolder(View itemView) {
@@ -163,8 +165,8 @@ public class BullectionDetailAdapter extends BaseAdapter {
             content2 = (TextView) itemView.findViewById(R.id.bullection_commment_content2);
             content3 = (TextView) itemView.findViewById(R.id.bullection_commment_content3);
             headingVideo = (VideoView) itemView.findViewById(R.id.bullection_list_headingvideo);
-            commentReplyCount= (TextView) itemView.findViewById(R.id.bullection_comment_replycount);
-            headingPic2= (ImageView) itemView.findViewById(R.id.bullection_list_headingpic2);
+            commentReplyCount = (TextView) itemView.findViewById(R.id.bullection_comment_replycount);
+            headingPic2 = (ImageView) itemView.findViewById(R.id.bullection_list_headingpic2);
         }
     }
 

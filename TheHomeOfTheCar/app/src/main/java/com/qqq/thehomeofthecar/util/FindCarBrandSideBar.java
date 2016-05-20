@@ -11,28 +11,21 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 
-
-
 /**
- * Created by 秦谦谦 on 16/5/16 16:36.
- * 右侧的字母索引View
+ * Created by 秦谦谦 on 16/5/19 18:04.
  */
-
-
-public class SideBar extends View {
-
+public class FindCarBrandSideBar extends View{
     //触摸事件
     private OnTouchingLetterChangedListener onTouchingLetterChangedListener;
 
     // 26个字母
-    public static String[] b = { "A", "B", "C", "D", "E", "F", "G", "H", "I",
+    public static String[] b = {"★", "A", "B", "C", "D", "E", "F", "G", "H", "I",
             "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V",
             "W", "X", "Y", "Z" };
     //选中
     private int choose = -1;
 
     private Paint paint = new Paint();
-
     private TextView mTextDialog;
 
     /**
@@ -45,15 +38,15 @@ public class SideBar extends View {
     }
 
 
-    public SideBar(Context context, AttributeSet attrs, int defStyleAttr) {
+    public FindCarBrandSideBar(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 
-    public SideBar(Context context, AttributeSet attrs) {
+    public FindCarBrandSideBar(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public SideBar(Context context) {
+    public FindCarBrandSideBar(Context context) {
         super(context);
     }
     /**
@@ -98,7 +91,7 @@ public class SideBar extends View {
 
         final int c = (int)(y / getHeight() * b.length);//点击y坐标所占高度的比例*b数组的长度就等于点击b中的个数
 
-      switch (action) {
+        switch (action) {
             case MotionEvent.ACTION_UP:
                 setBackgroundDrawable(new ColorDrawable(0x00000000));//设置背景颜色
                 choose = -1;
@@ -151,5 +144,7 @@ public class SideBar extends View {
     public interface OnTouchingLetterChangedListener {
         public void onTouchingLetterChanged(String s);
     }
+
+
 
 }

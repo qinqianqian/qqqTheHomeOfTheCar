@@ -18,4 +18,7 @@
     <color name="bullection_view">#868686</color>
     <color name="bullection_view_T">#e3e3e3</color>
     <color name="usecar_edit_back">#393939</color>
+
+    <!--品牌的背景颜色-->
+    <color name="findCar_brand_ViewColor">#e3e3e3</color>
 </resources>

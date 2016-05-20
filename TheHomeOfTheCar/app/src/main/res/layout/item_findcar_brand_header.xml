@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/findCar_brand_hot_pading"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="@dimen/findcar_brand_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/findcar_brand_pic_widthAndHeight"
+                android:layout_height="@dimen/findcar_brand_pic_widthAndHeight"
+                android:layout_gravity="center"
+                android:src="@mipmap/collection" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/findCar_brand_tv_marginTop"
+                android:text="@string/findCar_brand_collection" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/findCar_brand_View_thinWidth"
+            android:layout_height="@dimen/findCar_brand_View_fatHeight"
+            android:layout_gravity="center_vertical"
+            android:background="@color/findCar_brand_ViewColor" />
+
+        <LinearLayout
+            android:layout_width="@dimen/findcar_brand_width"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/findcar_brand_pic_widthAndHeight"
+                android:layout_height="@dimen/findcar_brand_pic_widthAndHeight"
+                android:layout_gravity="center"
+                android:src="@mipmap/history" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/findCar_brand_tv_marginTop"
+                android:text="@string/findCar_brand_history" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/findCar_brand_View_thinWidth"
+            android:layout_height="@dimen/findCar_brand_View_fatHeight"
+            android:layout_gravity="center_vertical"
+            android:background="@color/findCar_brand_ViewColor" />
+
+        <LinearLayout
+            android:layout_width="@dimen/findcar_brand_width"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/findcar_brand_pic_widthAndHeight"
+                android:layout_height="@dimen/findcar_brand_pic_widthAndHeight"
+                android:layout_gravity="center"
+                android:src="@mipmap/ranking" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/findCar_brand_tv_marginTop"
+                android:text="@string/findCar_brand_ranking" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/findCar_brand_hot_pading"
+        android:layout_marginTop="@dimen/findCar_brand_hot_pading"
+        android:background="@color/findCar_brand_ViewColor" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/findCar_brand_hot_pading"
+        android:text="@string/findCar_brand_hotBrand" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/findCar_brand_View_margin"
+        android:layout_marginRight="@dimen/findCar_brand_View_margin"
+        android:background="@color/findCar_brand_ViewColor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/findCar_brand_hot_pading"
+        android:paddingTop="@dimen/findCar_brand_hot_pading">
+
+        <LinearLayout
+            android:layout_width="@dimen/findcar_brand_width"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/findcar_brand_hot_img0"
+                android:layout_width="@dimen/findCar_brand_hot_widthAndHeight"
+                android:layout_height="@dimen/findCar_brand_hot_widthAndHeight"
+                android:layout_gravity="center"
+                android:src="@mipmap/ahlib_carback" />
+
+            <TextView
+                android:id="@+id/findcar_brand_hot_name0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/findCar_brand_hot_dazhong" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/findcar_brand_width"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/findcar_brand_hot_img1"
+                android:layout_width="@dimen/findCar_brand_hot_widthAndHeight"
+                android:layout_height="@dimen/findCar_brand_hot_widthAndHeight"
+                android:layout_gravity="center"
+                android:src="@mipmap/ahlib_carback" />
+
+            <TextView
+                android:id="@+id/findcar_brand_hot_name1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/findCar_brand_hot_bentian" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/findcar_brand_width"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/findcar_brand_hot_img2"
+                android:layout_width="@dimen/findCar_brand_hot_widthAndHeight"
+                android:layout_height="@dimen/findCar_brand_hot_widthAndHeight"
+                android:layout_gravity="center"
+                android:src="@mipmap/ahlib_carback" />
+
+            <TextView
+                android:id="@+id/findcar_brand_hot_name2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/findCar_brand_hot_fengtian" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/findcar_brand_width"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/findcar_brand_hot_img3"
+                android:layout_width="@dimen/findCar_brand_hot_widthAndHeight"
+                android:layout_height="@dimen/findCar_brand_hot_widthAndHeight"
+                android:layout_gravity="center"
+                android:src="@mipmap/ahlib_carback" />
+
+            <TextView
+                android:id="@+id/findcar_brand_hot_name3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/findCar_brand_hot_xiandai" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/findcar_brand_width"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/findcar_brand_hot_img4"
+                android:layout_width="@dimen/findCar_brand_hot_widthAndHeight"
+                android:layout_height="@dimen/findCar_brand_hot_widthAndHeight"
+                android:layout_gravity="center"
+                android:src="@mipmap/ahlib_carback" />
+
+            <TextView
+                android:id="@+id/findcar_brand_hot_name4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/findCar_brand_hot_aodi" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="@dimen/findcar_brand_width"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/findcar_brand_hot_img5"
+                android:layout_width="@dimen/findCar_brand_hot_widthAndHeight"
+                android:layout_height="@dimen/findCar_brand_hot_widthAndHeight"
+                android:layout_gravity="center"
+                android:src="@mipmap/ahlib_carback" />
+
+            <TextView
+                android:id="@+id/findcar_brand_hot_name5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/findCar_brand_hot_jiliqiche" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/findcar_brand_width"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/findcar_brand_hot_img6"
+                android:layout_width="@dimen/findCar_brand_hot_widthAndHeight"
+                android:layout_height="@dimen/findCar_brand_hot_widthAndHeight"
+                android:layout_gravity="center"
+                android:src="@mipmap/ahlib_carback" />
+
+            <TextView
+                android:id="@+id/findcar_brand_hot_name6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/findCar_brand_hot_bieke" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/findcar_brand_width"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/findcar_brand_hot_img7"
+                android:layout_width="@dimen/findCar_brand_hot_widthAndHeight"
+                android:layout_height="@dimen/findCar_brand_hot_widthAndHeight"
+                android:layout_gravity="center"
+                android:src="@mipmap/ahlib_carback" />
+
+            <TextView
+                android:id="@+id/findcar_brand_hot_name7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/findCar_brand_hot_futie" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/findcar_brand_width"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/findcar_brand_hot_img8"
+                android:layout_width="@dimen/findCar_brand_hot_widthAndHeight"
+                android:layout_height="@dimen/findCar_brand_hot_widthAndHeight"
+                android:layout_gravity="center"
+                android:src="@mipmap/ahlib_carback" />
+
+            <TextView
+                android:id="@+id/findcar_brand_hot_name8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/findCar_brand_hot_hafu" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/findcar_brand_width"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/findcar_brand_hot_img9"
+                android:layout_width="@dimen/findCar_brand_hot_widthAndHeight"
+                android:layout_height="@dimen/findCar_brand_hot_widthAndHeight"
+                android:layout_gravity="center"
+                android:src="@mipmap/ahlib_carback" />
+
+            <TextView
+                android:id="@+id/findcar_brand_hot_name9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/findCar_brand_hot_richan" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/findCar_brand_hot_pading"
+        android:layout_marginTop="@dimen/findCar_brand_hot_pading"
+        android:background="@color/findCar_brand_ViewColor" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/findCar_brand_hot_pading"
+        android:text="@string/findCar_brand_mainCar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/findCar_brand_View_margin"
+        android:layout_marginRight="@dimen/findCar_brand_View_margin"
+        android:background="@color/findCar_brand_ViewColor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/findCar_brand_hot_pading"
+        android:paddingTop="@dimen/findCar_brand_hot_pading">
+
+        <LinearLayout
+            android:layout_width="@dimen/findcar_brand_width"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/secondLv_img0"
+                android:layout_width="@dimen/findCar_brand_mainCar_width"
+                android:layout_height="@dimen/findCar_brand_mainCar_height"
+                android:layout_gravity="center"
+                android:src="@mipmap/ahlib_carback" />
+
+            <TextView
+                android:id="@+id/secondLv_tv0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/findCar_brand_mainCar_tv_margiTop"
+                android:text="@string/findCar_brand_mainCar_biyadiyuan" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/findcar_brand_width"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/secondLv_img1"
+                android:layout_width="@dimen/findCar_brand_mainCar_width"
+                android:layout_height="@dimen/findCar_brand_mainCar_height"
+                android:layout_gravity="center"
+                android:src="@mipmap/ahlib_carback" />
+
+            <TextView
+                android:id="@+id/secondLv_tv1"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/findCar_brand_mainCar_tv_margiTop"
+                android:text="@string/findCar_brand_mainCar_linken" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/findcar_brand_width"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/secondLv_img2"
+                android:layout_width="@dimen/findCar_brand_mainCar_width"
+                android:layout_height="@dimen/findCar_brand_mainCar_height"
+                android:layout_gravity="center"
+                android:src="@mipmap/ahlib_carback" />
+
+            <TextView
+                android:id="@+id/secondLv_tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/findCar_brand_mainCar_tv_margiTop"
+                android:text="@string/findCar_brand_mainCar_xindong" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/findCar_brand_hot_pading"
+
+        android:background="@color/findCar_brand_ViewColor" />
+
+
+</LinearLayout>

@@ -63,7 +63,7 @@ public class BullectionActivity extends BaseActivity {
     protected void initData() {
         Intent intent = getIntent();
         String path = intent.getStringExtra("path");
-      //  Log.d("BullectionActivity", path);
+       Log.d("BullectionActivity", path);
         request(path);
 
     }
